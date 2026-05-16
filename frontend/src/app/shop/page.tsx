@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Search, Heart, ShoppingBag, Star, SlidersHorizontal, X, ChevronDown } from 'lucide-react';
 import PageLayout from '@/components/ui/PageLayout';
-import Spinner from '@/components/ui/Spinner';
+import { ProductCardSkeleton } from '@/components/ui/Skeleton';
 import { useCart } from '@/context/CartContext';
 import type { Product, Category } from '@/types';
 import api from '@/services/api';
@@ -271,8 +271,15 @@ export default function ShopPage() {
 
       const { data } = await api.get('/api/products', { params });
       const list: Product[] = data.data || data;
-      if (reset) { setProducts(list); setPage(1); }
-      else        { setProducts((p) => [...p, ...list]); }
+      if (reset) {
+        setProducts(list);
+        setPage(1);
+      } else {
+        setProducts((prev) => {
+          const seen = new Set(prev.map((x) => x.slug));
+          return [...prev, ...list.filter((x) => !seen.has(x.slug))];
+        });
+      }
       setHasMore(list.length === PER_PAGE);
     } catch {
       setProducts([]);
@@ -411,7 +418,9 @@ export default function ShopPage() {
 
         {/* Results */}
         {loading && products.length === 0 ? (
-          <div className="flex justify-center py-24"><Spinner size={32} /></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {Array.from({ length: 8 }).map((_, i) => <ProductCardSkeleton key={i} />)}
+          </div>
         ) : sorted.length === 0 ? (
           <div className="text-center py-24">
             <p className="text-[#5F5148] text-sm" style={F}>
@@ -430,7 +439,7 @@ export default function ShopPage() {
               {activeFilterCount > 0 ? ' (filtered)' : ''}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {sorted.map((p) => <ProductCard key={p.id} product={p} />)}
+              {sorted.map((p) => <ProductCard key={p.slug} product={p} />)}
             </div>
             {hasMore && (
               <div className="text-center mt-10">

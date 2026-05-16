@@ -25,7 +25,7 @@ const gifts = [
     title: 'Dry Fruit Elegance', sub: 'Curated Premium Selection',
     items: ['Almonds', 'Cashews', 'Pistachios', 'Dried Apricots'], price: 1899,
     occasion: 'All Occasions',
-    img: 'https://images.unsplash.com/photo-1508222720893-62a0e5a9fb69?w=500&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?w=500&auto=format&fit=crop&q=80',
   },
 ];
 

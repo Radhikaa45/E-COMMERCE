@@ -13,7 +13,7 @@ interface User {
 interface AuthState {
   user: User | null;
   loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<User>;
   signup: (name: string, email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
 }
@@ -21,7 +21,7 @@ interface AuthState {
 const AuthContext = createContext<AuthState>({
   user: null,
   loading: true,
-  login: async () => {},
+  login: async () => { throw new Error('AuthProvider not mounted'); },
   signup: async () => {},
   logout: async () => {},
 });
@@ -52,10 +52,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => { restore(); }, [restore]);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, password: string): Promise<User> => {
     const { data } = await api.post('/api/auth/login', { email, password });
     localStorage.setItem('accessToken', data.accessToken);
     setUser(data.user);
+    return data.user;
   };
 
   const signup = async (name: string, email: string, password: string) => {

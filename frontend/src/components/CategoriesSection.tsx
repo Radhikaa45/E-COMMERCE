@@ -8,7 +8,7 @@ const FD = { fontFamily: "'Cormorant Garamond', Georgia, serif" } as const;
 const F  = { fontFamily: "'DM Sans', system-ui, sans-serif" } as const;
 
 const categories = [
-  { name: 'Artisan Rice', slug: 'rice', count: 5, desc: 'Himalayan Basmati & Exotic', img: 'https://images.unsplash.com/photo-1586201375362-ce7e78b5de09?w=400&auto=format&fit=crop&q=75' },
+  { name: 'Artisan Rice', slug: 'rice', count: 5, desc: 'Himalayan Basmati & Exotic', img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=400&auto=format&fit=crop&q=75' },
   { name: 'Dry Fruits', slug: 'dry-fruits', count: 6, desc: 'Hand-Sorted Himalayan', img: 'https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?w=400&auto=format&fit=crop&q=75' },
   { name: 'Whole Spices', slug: 'spices', count: 9, desc: "Kashmir's Aromatics", img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&auto=format&fit=crop&q=75' },
   { name: 'Wellness', slug: 'health', count: 3, desc: 'Superfoods & Breakfast', img: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&auto=format&fit=crop&q=75' },

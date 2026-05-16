@@ -11,12 +11,12 @@ const products = [
   {
     id: 1, name: 'Jammu Basmati Rice', category: 'Artisan Rice', price: 299, originalPrice: 349,
     desc: 'Long-grain, aromatic basmati aged 12 months', badge: 'Bestseller', weight: '1 kg',
-    img: 'https://images.unsplash.com/photo-1586201375362-ce7e78b5de09?w=500&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=500&auto=format&fit=crop&q=80',
   },
   {
     id: 2, name: 'Kashmir Almonds', category: 'Dry Fruits', price: 699, originalPrice: 849,
     desc: 'Wild-harvested, naturally sun-dried Himalayan almonds', badge: 'Premium', weight: '500 g',
-    img: 'https://images.unsplash.com/photo-1508222720893-62a0e5a9fb69?w=500&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?w=500&auto=format&fit=crop&q=80',
   },
   {
     id: 3, name: 'Green Cardamom', category: 'Whole Spices', price: 449, originalPrice: undefined,
@@ -46,7 +46,7 @@ const products = [
   {
     id: 8, name: 'Himalayan Cashews', category: 'Dry Fruits', price: 549, originalPrice: 649,
     desc: 'Whole creamy cashews with a naturally sweet flavour', badge: undefined, weight: '500 g',
-    img: 'https://images.unsplash.com/photo-1562771154-e8a7c62e2f8a?w=500&auto=format&fit=crop&q=80',
+    img: 'https://images.unsplash.com/photo-1590080874088-eec64895b423?w=500&auto=format&fit=crop&q=80',
   },
 ];
 

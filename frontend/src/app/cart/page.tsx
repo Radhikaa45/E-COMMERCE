@@ -149,10 +149,10 @@ export default function CartPage() {
                 </button>
               </div>
 
-              <button className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full text-[11px] tracking-[0.16em] uppercase font-medium text-white transition-colors hover:bg-[#7D0F1C]"
+              <Link href="/checkout" className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full text-[11px] tracking-[0.16em] uppercase font-medium text-white transition-colors hover:bg-[#7D0F1C]"
                 style={{ ...F, background: '#9E1D2F' }}>
                 Proceed to Checkout <ArrowRight size={13} strokeWidth={1.5} />
-              </button>
+              </Link>
 
               <p className="text-center text-[10px] text-[#5F5148]/50 mt-3" style={F}>
                 Secure checkout · 128-bit SSL

@@ -26,7 +26,7 @@ export default function HeritageSection() {
             style={{ boxShadow: '0 24px 64px rgba(90,50,30,0.16)' }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1586201375362-ce7e78b5de09?w=800&auto=format&fit=crop&q=80"
+              src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&auto=format&fit=crop&q=80"
               alt="Himalayan rice fields and heritage farming"
               fill
               className="object-cover"

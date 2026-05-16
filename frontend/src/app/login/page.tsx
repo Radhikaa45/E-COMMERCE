@@ -21,8 +21,8 @@ export default function LoginPage() {
     setError('');
     setLoading(true);
     try {
-      await login(email, password);
-      router.push('/');
+      const u = await login(email, password);
+      router.push(u.role === 'admin' ? '/admin' : '/');
     } catch (err: unknown) {
       const msg = (err as { response?: { data?: { message?: string } } })?.response?.data?.message || 'Login failed. Please try again.';
       setError(msg);

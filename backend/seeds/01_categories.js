@@ -5,7 +5,7 @@ export async function seed(knex) {
       name: 'Artisan Rice',
       slug: 'rice',
       description: 'Himalayan Basmati & Exotic Varieties',
-      image_url: 'https://images.unsplash.com/photo-1586201375362-ce7e78b5de09?w=600&auto=format&fit=crop&q=80',
+      image_url: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=600&auto=format&fit=crop&q=80',
       sort_order: 1,
     },
     {

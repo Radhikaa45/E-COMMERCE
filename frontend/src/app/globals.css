@@ -40,3 +40,14 @@ body {
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #F4EFE8; }
 ::-webkit-scrollbar-thumb { background: #C9A66B55; border-radius: 3px; }
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #EFE7DE 25%, #FAF7F2 50%, #EFE7DE 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}

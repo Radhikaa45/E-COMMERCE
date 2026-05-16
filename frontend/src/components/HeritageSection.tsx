@@ -26,7 +26,7 @@ export default function HeritageSection() {
             style={{ boxShadow: '0 24px 64px rgba(90,50,30,0.16)' }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&auto=format&fit=crop&q=80"
+              src="/farmerHeritage.png"
               alt="Himalayan rice fields and heritage farming"
               fill
               className="object-cover"
@@ -66,7 +66,7 @@ export default function HeritageSection() {
           <p className="text-[#5F5148] leading-[1.85] mb-4 text-[0.95rem]" style={F}>
             NEEKZ Special was born from a deep reverence for Jammu & Kashmir — its valleys,
             its farmers, and centuries-old culinary traditions. We bridge the distance between
-            Himalayan artisans and modern Indian kitchens.
+            Northern artisans and modern Indian kitchens.
           </p>
           <p className="text-[#5F5148] leading-[1.85] mb-9 text-[0.95rem]" style={F}>
             Every product carries the fingerprint of the families who grew it.

@@ -7,17 +7,17 @@ const FD = { fontFamily: "'Cormorant Garamond', Georgia, serif" } as const;
 const F  = { fontFamily: "'DM Sans', system-ui, sans-serif" } as const;
 
 const milestones = [
-  { year: '1987', title: 'The Beginning', desc: 'Our founder, Rajan Gupta, began sourcing basmati directly from small farms in Jammu, driven by a belief that quality starts at the root.' },
-  { year: '1998', title: 'Going Beyond Rice', desc: 'We expanded into Kashmiri dry fruits and whole spices, forging partnerships with mountain farmers who had cultivated these crops for generations.' },
-  { year: '2009', title: 'GI Recognition', desc: 'Several products in our catalogue received Geographical Indication tags, formally recognising the unique terroir of Jammu & Kashmir.' },
-  { year: '2021', title: 'NEEKZ Special Born', desc: 'The brand was created to bring this three-decade heritage directly to urban kitchens across India through a curated digital storefront.' },
+  { year: '2006', title: 'The Beginning', desc: 'A journey inspired by a passion for authentic flavors, quality ingredients, and timeless culinary traditions.' },
+  { year: '2011', title: 'Going Beyond Rice', desc: "The collection grew with carefully selected gourmet products, bringing together tradition and exceptional taste." },
+  { year: '2016', title: 'GI Recognition', desc: 'Several products in our catalogue received Geographical Indication tags, formally recognising the unique terroir of Jammu & Kashmir.' },
+  { year: '2023', title: 'NEEKZ Special Born', desc: 'The brand was created to bring this decade heritage directly to urban kitchens across India through a curated digital storefront.' },
 ];
 
 const values = [
   { icon: Leaf, title: 'Farm-to-Table Purity', desc: 'No additives, no artificial coloring, no compromise. What grows in the mountains is what reaches your kitchen.' },
   { icon: Award, title: 'GI-Tagged Authenticity', desc: 'We stock products that carry the Geographical Indication stamp, ensuring genuine origin and traceable provenance.' },
   { icon: Users, title: 'Farmer-First Economy', desc: 'We pay a premium to our partner farmers — 30% above market rate — to sustain livelihoods and encourage organic practices.' },
-  { icon: MapPin, title: 'Himalayan Terroir', desc: 'Altitude, glacial water, and mountain soil give our products flavour profiles that simply cannot be replicated elsewhere.' },
+  { icon: MapPin, title: 'Nothern Valley', desc: 'Altitude, glacial water, and mountain soil give our products flavour profiles that simply cannot be replicated elsewhere.' },
 ];
 
 export default function HeritagePage() {
@@ -36,7 +36,7 @@ export default function HeritagePage() {
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 px-5 text-center">
           <p className="text-[10px] tracking-[0.4em] uppercase text-[#C9A66B] mb-3" style={F}>Our Story</p>
           <h1 className="text-white mb-4" style={{ ...FD, fontSize: 'clamp(2rem,5vw,3.8rem)', fontWeight: 600, lineHeight: 1.1 }}>
-            Rooted in the<br /><em className="text-[#C9A66B]">Heart of Kashmir</em>
+            Rooted in the<br /><em className="text-[#C9A66B]">Heart of Jammu &Kashmir</em>
           </h1>
           <p className="text-white/70 max-w-lg text-[13px] leading-relaxed" style={F}>
             Three decades of curating the finest gourmet produce from Jammu & Kashmir's mountains, valleys, and artisan farms.
@@ -51,7 +51,7 @@ export default function HeritagePage() {
             <div>
               <p className="text-[10px] tracking-[0.32em] uppercase text-[#C9A66B] mb-3 font-medium" style={F}>Who We Are</p>
               <h2 className="text-[#3A2B27] mb-6" style={{ ...FD, fontSize: 'clamp(1.7rem,3vw,2.6rem)', fontWeight: 600, lineHeight: 1.2 }}>
-                Bringing the <em className="text-[#9E1D2F]">Himalayan Pantry</em><br />to Modern Kitchens
+                Bringing the <em className="text-[#9E1D2F]">NOTHERN Pantry</em><br />to Modern Kitchens
               </h2>
               <p className="text-[13px] text-[#5F5148] leading-relaxed mb-4" style={F}>
                 NEEKZ Special is not a product company — it is a curation movement. Every item we carry has been sourced through personal relationships with farmers, cooperatives, and artisans who have practiced their craft for generations in the mountains of Jammu & Kashmir.

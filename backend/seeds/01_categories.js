@@ -2,16 +2,16 @@ export async function seed(knex) {
   await knex('categories').del();
   await knex('categories').insert([
     {
-      name: 'Artisan Rice',
+      name: 'Rice',
       slug: 'rice',
-      description: 'Himalayan Basmati & Exotic Varieties',
+      description: 'Basmati & Exotic Varieties',
       image_url: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=600&auto=format&fit=crop&q=80',
       sort_order: 1,
     },
     {
       name: 'Dry Fruits',
       slug: 'dry-fruits',
-      description: 'Hand-Sorted Himalayan Treasures',
+      description: 'Hand-Sorted  Treasures',
       image_url: 'https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?w=600&auto=format&fit=crop&q=80',
       sort_order: 2,
     },

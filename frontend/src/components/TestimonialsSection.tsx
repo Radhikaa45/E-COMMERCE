@@ -7,10 +7,10 @@ const FD = { fontFamily: "'Cormorant Garamond', Georgia, serif" } as const;
 const F  = { fontFamily: "'DM Sans', system-ui, sans-serif" } as const;
 
 const testimonials = [
-  { name: 'Priya Sharma', location: 'Mumbai', rating: 5, product: 'Jammu Basmati Rice', text: 'The Jammu Basmati is unlike anything I\'ve had before. Each grain stands apart perfectly, and the fragrance fills the entire kitchen. NEEKZ Special has transformed our family dinners.' },
-  { name: 'Arjun Mehta', location: 'Delhi', rating: 5, product: 'Kashmiri Noon Chai', text: 'I ordered the Noon Chai for my mother who grew up in Kashmir. She said it tasted exactly like home. That says everything. The packaging was also beautifully crafted.' },
-  { name: 'Riya Kapoor', location: 'Bangalore', rating: 5, product: 'Festive Dry Fruit Hamper', text: 'The dry fruit gift hamper for Diwali was a showstopper. My clients were genuinely impressed. This is the kind of gifting that leaves a lasting impression.' },
-  { name: 'Vikram Nair', location: 'Pune', rating: 5, product: 'Bhaderwahi Rajmash', text: 'The Bhaderwahi Rajmash took me back to my grandmother\'s kitchen in Jammu. Earthy, hearty, and genuinely from the source.' },
+  { name: 'Priya Sharma', location: 'Reasi', rating: 5, product: 'Jammu Basmati Rice', text: 'The Jammu Basmati is unlike anything I\'ve had before. Each grain stands apart perfectly, and the fragrance fills the entire kitchen. NEEKZ Special has transformed our family dinners.' },
+  { name: 'Arjun Mehta', location: 'Doda', rating: 5, product: 'Kashmiri Noon Chai', text: 'I ordered the Noon Chai for my mother who grew up in Kashmir. She said it tasted exactly like home. That says everything. The packaging was also beautifully crafted.' },
+  { name: 'Riya Kapoor', location: 'jammu', rating: 5, product: 'Festive Dry Fruit Hamper', text: 'The dry fruit gift hamper for Diwali was a showstopper. My clients were genuinely impressed. This is the kind of gifting that leaves a lasting impression.' },
+  { name: 'Vikram Nair', location: 'kashmir', rating: 5, product: 'Bhaderwahi Rajmash', text: 'The Bhaderwahi Rajmash took me back to my grandmother\'s kitchen in Jammu. Earthy, hearty, and genuinely from the source.' },
 ];
 
 export default function TestimonialsSection() {

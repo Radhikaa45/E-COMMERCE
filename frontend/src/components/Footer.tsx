@@ -79,15 +79,17 @@ export default function Footer() {
             <div className="flex flex-col gap-3.5 mb-6">
               <a href="mailto:hello@neekzspecial.com" className="flex items-start gap-2.5 group">
                 <Mail size={13} strokeWidth={1.5} className="text-[#C9A66B] mt-0.5 flex-shrink-0" />
-                <span className="text-[12px] text-white/45 group-hover:text-white/70 transition-colors" style={F}>hello@neekzspecial.com</span>
+                <span className="text-[12px] text-white/45 group-hover:text-white/70 transition-colors" style={F}> shreevaishnavifoodssamba@gmail.com</span>
               </a>
               <a href="tel:+919876543210" className="flex items-start gap-2.5 group">
                 <Phone size={13} strokeWidth={1.5} className="text-[#C9A66B] mt-0.5 flex-shrink-0" />
-                <span className="text-[12px] text-white/45 group-hover:text-white/70 transition-colors" style={F}>+91 98765 43210</span>
+                <span className="text-[12px] text-white/45 group-hover:text-white/70 transition-colors" style={F}> +91 88999 14001</span>
               </a>
               <div className="flex items-start gap-2.5">
                 <MapPin size={13} strokeWidth={1.5} className="text-[#C9A66B] mt-0.5 flex-shrink-0" />
-                <span className="text-[12px] text-white/45 leading-relaxed" style={F}>Jammu, J&K — 180001</span>
+                <span className="text-[12px] text-white/45 leading-relaxed" style={F}>   Shree Vaishnavi Foods<br />
+        IGC, Phase III, Samba<br />
+        Jammu & Kashmir - 184121</span>
               </div>
             </div>
             <div className="px-4 py-3 rounded-xl" style={{ background: 'rgba(201,166,107,0.06)', border: '1px solid rgba(201,166,107,0.12)' }}>

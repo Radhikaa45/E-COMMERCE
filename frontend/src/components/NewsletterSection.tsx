@@ -29,7 +29,7 @@ export default function NewsletterSection() {
         </div>
 
         <h2 className="text-white mb-3" style={{ ...FD, fontSize: 'clamp(1.9rem, 4vw, 2.9rem)', fontWeight: 600, lineHeight: 1.2 }}>
-          Join Our <em style={{ color: '#C9A66B' }}>Artisanal</em> Circle
+          Join Our <em style={{ color: '#C9A66B' }}>Heritage</em> Circle
         </h2>
         <p className="text-white/50 text-sm leading-relaxed mb-9" style={F}>
           First access to new collections, heritage recipes, harvest season offers, and exclusive member pricing.

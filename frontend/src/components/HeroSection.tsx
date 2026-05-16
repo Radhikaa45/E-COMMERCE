@@ -110,7 +110,7 @@ export default function HeroSection() {
                 style={{ boxShadow: '0 32px 72px rgba(90,50,30,0.18)' }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=880&auto=format&fit=crop&q=80"
+                  src="/Hero copy.png"
                   alt="Himalayan spices and artisan produce"
                   fill
                   className="object-cover"

@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
         <div className="text-center mb-14">
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#C9A66B] mb-3 font-medium" style={F}>Voices of Our Circle</p>
           <h2 className="text-[#3A2B27]" style={{ ...FD, fontSize: 'clamp(1.8rem, 3.5vw, 2.7rem)', fontWeight: 600, lineHeight: 1.2 }}>
-            What Our <em className="text-[#9E1D2F]">Artisan Circle</em> Says
+            What Our <em className="text-[#9E1D2F]"> Flavor Circle</em> Says
           </h2>
           <div className="gold-divider mt-4" />
         </div>

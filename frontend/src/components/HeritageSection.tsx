@@ -50,8 +50,8 @@ export default function HeritageSection() {
               <Mountain size={16} className="text-white" strokeWidth={1.5} />
             </div>
             <div>
-              <p style={{ ...FD, fontSize: '1.2rem', fontWeight: 600, color: '#3A2B27' }}>Est. 2020</p>
-              <p className="text-[9px] tracking-wider uppercase text-[#5F5148]" style={F}>Artisan Heritage Brand</p>
+              <p style={{ ...FD, fontSize: '1.2rem', fontWeight: 600, color: '#3A2B27' }}>Est. 2023</p>
+              <p className="text-[9px] tracking-wider uppercase text-[#5F5148]" style={F}> Heritage Brand</p>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function HeritageSection() {
         <div>
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#C9A66B] mb-3 font-medium" style={F}>Our Heritage</p>
           <h2 className="text-[#3A2B27] mb-5" style={{ ...FD, fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 600, lineHeight: 1.2 }}>
-            Born from the <em className="text-[#9E1D2F]">Himalayan</em> Heartland
+            Born from the <em className="text-[#9E1D2F]">Nothern</em> Heartland
           </h2>
           <div className="h-px w-14 bg-[#C9A66B] mb-6" />
           <p className="text-[#5F5148] leading-[1.85] mb-4 text-[0.95rem]" style={F}>

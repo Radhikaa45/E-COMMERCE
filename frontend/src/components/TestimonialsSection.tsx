@@ -1,189 +1,97 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { testimonials } from '@/data/products';
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const FD = { fontFamily: "'Cormorant Garamond', Georgia, serif" } as const;
+const F  = { fontFamily: "'DM Sans', system-ui, sans-serif" } as const;
+
+const testimonials = [
+  { name: 'Priya Sharma', location: 'Mumbai', rating: 5, product: 'Jammu Basmati Rice', text: 'The Jammu Basmati is unlike anything I\'ve had before. Each grain stands apart perfectly, and the fragrance fills the entire kitchen. NEEKZ Special has transformed our family dinners.' },
+  { name: 'Arjun Mehta', location: 'Delhi', rating: 5, product: 'Kashmiri Noon Chai', text: 'I ordered the Noon Chai for my mother who grew up in Kashmir. She said it tasted exactly like home. That says everything. The packaging was also beautifully crafted.' },
+  { name: 'Riya Kapoor', location: 'Bangalore', rating: 5, product: 'Festive Dry Fruit Hamper', text: 'The dry fruit gift hamper for Diwali was a showstopper. My clients were genuinely impressed. This is the kind of gifting that leaves a lasting impression.' },
+  { name: 'Vikram Nair', location: 'Pune', rating: 5, product: 'Bhaderwahi Rajmash', text: 'The Bhaderwahi Rajmash took me back to my grandmother\'s kitchen in Jammu. Earthy, hearty, and genuinely from the source.' },
+];
 
 export default function TestimonialsSection() {
-  const [current, setCurrent] = useState(0);
-
-  const prev = () => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
-  const next = () => setCurrent((c) => (c + 1) % testimonials.length);
-
-  const t = testimonials[current];
+  const [cur, setCur] = useState(0);
+  const t = testimonials[cur];
 
   return (
-    <section className="py-28 px-6 lg:px-10 bg-[#EFE7DE]">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <p
-            className="text-[10px] tracking-[0.35em] uppercase text-[#C9A66B] mb-4 font-medium"
-            style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-          >
-            Voices of Our Circle
-          </p>
-          <h2
-            className="font-display text-[#3A2B27]"
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-              fontWeight: 600,
-              lineHeight: 1.2,
-            }}
-          >
-            What Our{' '}
-            <span className="italic text-[#9E1D2F]">Artisan Circle</span>
-            <br className="hidden sm:block" /> Says
+    <section className="py-24 px-5 lg:px-10 bg-[#EFE7DE]">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-14">
+          <p className="text-[10px] tracking-[0.35em] uppercase text-[#C9A66B] mb-3 font-medium" style={F}>Voices of Our Circle</p>
+          <h2 className="text-[#3A2B27]" style={{ ...FD, fontSize: 'clamp(1.8rem, 3.5vw, 2.7rem)', fontWeight: 600, lineHeight: 1.2 }}>
+            What Our <em className="text-[#9E1D2F]">Artisan Circle</em> Says
           </h2>
-          <div className="gold-divider mt-5" />
-        </motion.div>
+          <div className="gold-divider mt-4" />
+        </div>
 
-        {/* Testimonial carousel */}
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative text-center px-4 sm:px-12"
+        <div className="text-center px-4 sm:px-10">
+          {/* Stars */}
+          <div className="flex justify-center gap-1 mb-6">
+            {[...Array(t.rating)].map((_, i) => <Star key={i} size={13} fill="#C9A66B" className="text-[#C9A66B]" />)}
+          </div>
+
+          {/* Quote */}
+          <p
+            key={cur}
+            className="text-[#3A2B27] italic leading-[1.8] mb-7 transition-opacity"
+            style={{ ...FD, fontSize: 'clamp(1.05rem, 2.5vw, 1.3rem)', fontWeight: 400 }}
+          >
+            &ldquo;{t.text}&rdquo;
+          </p>
+
+          {/* Author */}
+          <div className="flex flex-col items-center gap-1">
+            <div className="h-px w-8 bg-[#C9A66B] mb-2" />
+            <p className="text-[#3A2B27] font-semibold" style={{ ...FD, fontSize: '0.95rem', fontWeight: 600 }}>{t.name}</p>
+            <p className="text-[10px] tracking-[0.2em] uppercase text-[#5F5148]" style={F}>{t.location}</p>
+            <p className="text-[10px] text-[#C9A66B] italic mt-0.5" style={F}>{t.product}</p>
+          </div>
+
+          {/* Nav */}
+          <div className="flex items-center justify-center gap-5 mt-9">
+            <button
+              onClick={() => setCur((c) => (c - 1 + testimonials.length) % testimonials.length)}
+              className="w-9 h-9 rounded-full flex items-center justify-center border border-[#E7DDD2] bg-[#FAF7F2] text-[#5F5148] hover:border-[#9E1D2F] hover:text-[#9E1D2F] transition-all"
             >
-              {/* Quote icon */}
-              <Quote
-                size={40}
-                className="mx-auto mb-8 text-[#C9A66B] opacity-40"
-                strokeWidth={1}
-                fill="currentColor"
-              />
-
-              {/* Stars */}
-              <div className="flex justify-center gap-1 mb-7">
-                {[...Array(t.rating)].map((_, i) => (
-                  <Star key={i} size={14} fill="#C9A66B" className="text-[#C9A66B]" />
-                ))}
-              </div>
-
-              {/* Quote text */}
-              <p
-                className="font-display text-[#3A2B27] italic leading-[1.8] mb-8"
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontSize: 'clamp(1.05rem, 2.5vw, 1.35rem)',
-                  fontWeight: 400,
-                }}
-              >
-                &ldquo;{t.text}&rdquo;
-              </p>
-
-              {/* Author */}
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-px w-10 bg-[#C9A66B] mb-3" />
-                <p
-                  className="font-display text-[#3A2B27] font-semibold"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '1rem', fontWeight: 600 }}
-                >
-                  {t.name}
-                </p>
-                <p
-                  className="text-[10px] tracking-[0.2em] uppercase text-[#5F5148]"
-                  style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-                >
-                  {t.location}
-                </p>
-                <p
-                  className="text-[10px] text-[#C9A66B] mt-1 italic"
-                  style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-                >
-                  {t.product}
-                </p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-6 mt-12">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={prev}
-              className="w-10 h-10 rounded-full flex items-center justify-center border border-[#E7DDD2] bg-[#FAF7F2] text-[#5F5148] hover:border-[#9E1D2F] hover:text-[#9E1D2F] transition-all duration-300"
-              aria-label="Previous"
-            >
-              <ChevronLeft size={16} strokeWidth={1.5} />
-            </motion.button>
-
-            {/* Dots */}
-            <div className="flex gap-2">
+              <ChevronLeft size={15} strokeWidth={1.5} />
+            </button>
+            <div className="flex gap-1.5">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`rounded-full transition-all duration-300 ${
-                    i === current
-                      ? 'w-6 h-2 bg-[#9E1D2F]'
-                      : 'w-2 h-2 bg-[#DCCFC3] hover:bg-[#C9A66B]'
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
+                  onClick={() => setCur(i)}
+                  className="rounded-full transition-all duration-300"
+                  style={{ width: i === cur ? '1.5rem' : '0.5rem', height: '0.5rem', background: i === cur ? '#9E1D2F' : '#DCCFC3' }}
                 />
               ))}
             </div>
-
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={next}
-              className="w-10 h-10 rounded-full flex items-center justify-center border border-[#E7DDD2] bg-[#FAF7F2] text-[#5F5148] hover:border-[#9E1D2F] hover:text-[#9E1D2F] transition-all duration-300"
-              aria-label="Next"
+            <button
+              onClick={() => setCur((c) => (c + 1) % testimonials.length)}
+              className="w-9 h-9 rounded-full flex items-center justify-center border border-[#E7DDD2] bg-[#FAF7F2] text-[#5F5148] hover:border-[#9E1D2F] hover:text-[#9E1D2F] transition-all"
             >
-              <ChevronRight size={16} strokeWidth={1.5} />
-            </motion.button>
+              <ChevronRight size={15} strokeWidth={1.5} />
+            </button>
           </div>
         </div>
 
-        {/* Trust signals */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="grid grid-cols-3 gap-6 mt-20 pt-12 border-t border-[#E7DDD2]"
-        >
+        {/* Trust stats */}
+        <div className="grid grid-cols-3 gap-6 mt-16 pt-10 border-t border-[#E7DDD2]">
           {[
-            { number: '4.9/5', label: 'Avg. Rating', sub: 'from 1,200+ reviews' },
-            { number: '5000+', label: 'Happy Customers', sub: 'across 120+ cities' },
-            { number: '98%', label: 'Reorder Rate', sub: 'repeat purchases' },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p
-                className="font-display text-[#9E1D2F] font-semibold mb-1"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '1.5rem', fontWeight: 700 }}
-              >
-                {stat.number}
-              </p>
-              <p
-                className="text-[#3A2B27] text-[11px] font-medium mb-0.5"
-                style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-              >
-                {stat.label}
-              </p>
-              <p
-                className="text-[#5F5148] text-[9px] tracking-wider"
-                style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
-              >
-                {stat.sub}
-              </p>
+            { n: '4.9/5', l: 'Avg Rating', s: '1,200+ reviews' },
+            { n: '5K+', l: 'Customers', s: '120+ cities' },
+            { n: '98%', l: 'Reorder Rate', s: 'repeat purchases' },
+          ].map(({ n, l, s }) => (
+            <div key={l} className="text-center">
+              <p className="text-[#9E1D2F] mb-0.5" style={{ ...FD, fontSize: '1.4rem', fontWeight: 600 }}>{n}</p>
+              <p className="text-[11px] font-medium text-[#3A2B27]" style={F}>{l}</p>
+              <p className="text-[9px] tracking-wider text-[#5F5148]" style={F}>{s}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

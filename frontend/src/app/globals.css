@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 @import "tailwindcss";
 
@@ -13,56 +13,30 @@
   --color-rose-beige: #DCCFC3;
   --color-luxury-border: #E7DDD2;
   --color-light-neutral: #FAF7F2;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background-color: #F4EFE8;
   color: #3A2B27;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-.font-display {
-  font-family: 'Playfair Display', Georgia, serif;
-}
+.font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+.font-body    { font-family: 'DM Sans', system-ui, sans-serif; }
 
-.font-body {
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-/* Grain texture overlay */
-.grain-texture::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Gold divider */
 .gold-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #C9A66B, transparent);
-  width: 80px;
+  background: linear-gradient(90deg, transparent, #C9A66B 40%, #C9A66B 60%, transparent);
+  width: 64px;
   margin: 0 auto;
 }
 
 /* Luxury scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #F4EFE8;
-}
-::-webkit-scrollbar-thumb {
-  background: #C9A66B;
-  border-radius: 3px;
-}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F4EFE8; }
+::-webkit-scrollbar-thumb { background: #C9A66B55; border-radius: 3px; }

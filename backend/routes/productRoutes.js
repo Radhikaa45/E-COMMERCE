@@ -1,11 +1,10 @@
-const express=require("express")
+import { Router } from 'express';
+import { getProducts, getFeatured, getProduct } from '../controllers/productController.js';
 
-const router=express.Router()
+const router = Router();
 
-const {
-getProducts
-}=require("../controllers/productController")
+router.get('/', getProducts);
+router.get('/featured', getFeatured);
+router.get('/:slug', getProduct);
 
-router.get("/",getProducts)
-
-module.exports=router
+export default router;

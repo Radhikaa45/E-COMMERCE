@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { AuthProvider } from '@/context/AuthContext';
+import { CartProvider } from '@/context/CartContext';
 
 export const metadata: Metadata = {
-  title: 'NEEKZ Special — Artisanal Treasures from Jammu & Kashmir',
+  title: 'NEEKZ Special — Artisanal Gourmet from Jammu & Kashmir',
   description:
-    'Premium handcrafted gourmet food from the Himalayan heartland. Artisan Basmati Rice, dry fruits, whole spices, and heritage products sourced directly from Jammu & Kashmir.',
-  keywords: 'Jammu Kashmir food, artisan basmati rice, dry fruits, spices, Bhaderwahi rajmash, Kashmiri noon chai, luxury gourmet',
+    'Premium handcrafted gourmet food from the Himalayan heartland. Basmati rice, dry fruits, whole spices & heritage products from Jammu & Kashmir.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -15,8 +16,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body style={{ margin: 0, padding: 0, backgroundColor: '#F4EFE8' }}>
-        {children}
+      <body>
+        <AuthProvider>
+          <CartProvider>
+            {children}
+          </CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );

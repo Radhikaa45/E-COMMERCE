@@ -73,7 +73,7 @@ export default function LoginPage() {
           >
             "Welcome back to
             <br />
-            the Artisan Circle"
+            the NEEKZ Circle"
           </h2>
 
           <p

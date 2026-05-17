@@ -8,12 +8,12 @@ const FD = { fontFamily: "'Cormorant Garamond', Georgia, serif" } as const;
 const F  = { fontFamily: "'DM Sans', system-ui, sans-serif" } as const;
 
 const categories = [
-  { name: 'Artisan Rice', slug: 'rice', count: 5, desc: 'Himalayan Basmati & Exotic', img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=400&auto=format&fit=crop&q=75' },
-  { name: 'Dry Fruits', slug: 'dry-fruits', count: 6, desc: 'Hand-Sorted Himalayan', img: 'https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?w=400&auto=format&fit=crop&q=75' },
-  { name: 'Whole Spices', slug: 'spices', count: 9, desc: "Kashmir's Aromatics", img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&auto=format&fit=crop&q=75' },
-  { name: 'Wellness', slug: 'health', count: 3, desc: 'Superfoods & Breakfast', img: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&auto=format&fit=crop&q=75' },
-  { name: 'Heritage Pulses', slug: 'pulses', count: 2, desc: 'Bhaderwahi & Traditional', img: 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&auto=format&fit=crop&q=75' },
-  { name: 'Gift Hampers', slug: 'gifts', count: 4, desc: 'Curated Luxury Gifts', img: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&auto=format&fit=crop&q=75' },
+  { name: 'Rice', slug: 'rice', count: 5, desc: 'Basmati & Exotic', img: '/Rice.png' },
+  { name: 'Dry Fruits', slug: 'dry-fruits', count: 6, desc: 'Hand-Sorted Himalayan', img: '/Dryfruits.png' },
+  { name: 'Whole Spices', slug: 'spices', count: 9, desc: "Kashmir's Aromatics", img: '/spices.png' },
+  { name: 'Wellness', slug: 'health', count: 3, desc: 'Superfoods & Breakfast', img: '/healthy.png' },
+  { name: 'Heritage Pulses', slug: 'pulses', count: 2, desc: 'Bhaderwahi & Traditional', img: '/pulses.png' },
+  { name: 'Gift Hampers', slug: 'gifts', count: 4, desc: 'Curated Luxury Gifts', img: '/GiftHampers.png' },
 ];
 
 export default function CategoriesSection() {
@@ -23,7 +23,7 @@ export default function CategoriesSection() {
         <div className="text-center mb-14">
           <p className="text-[10px] tracking-[0.35em] uppercase text-[#C9A66B] mb-3 font-medium" style={F}>Our Collections</p>
           <h2 className="text-[#3A2B27]" style={{ ...FD, fontSize: 'clamp(1.9rem, 4vw, 2.9rem)', fontWeight: 600, lineHeight: 1.2 }}>
-            Explore <em className="text-[#9E1D2F]">Artisan</em> Categories
+            Explore <em className="text-[#9E1D2F]">NEEKZ</em> Categories
           </h2>
           <div className="gold-divider mt-4" />
         </div>

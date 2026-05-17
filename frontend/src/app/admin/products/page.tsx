@@ -120,8 +120,10 @@ function ProductModal({
   const [form, setForm] = useState<ProductForm>(product ? toForm(product) : EMPTY_FORM);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [imgBroken, setImgBroken] = useState(false);
 
   function set<K extends keyof ProductForm>(k: K, v: ProductForm[K]) {
+    if (k === 'image_url') setImgBroken(false);
     setForm((f) => ({ ...f, [k]: v }));
   }
 
@@ -217,9 +219,18 @@ function ProductModal({
           </Field>
 
           {form.image_url && (
-            <div className="relative h-32 rounded-xl overflow-hidden" style={{ border: '1px solid #E7DDD2' }}>
-              <Image src={form.image_url} alt="Preview" fill className="object-cover"
-                onError={() => set('image_url', '')} />
+            <div className="relative h-32 rounded-xl overflow-hidden flex items-center justify-center" style={{ border: '1px solid #E7DDD2', background: '#F4EFE8' }}>
+              {imgBroken ? (
+                <p className="text-[11px] text-[#5F5148]/50" style={F}>Could not load image preview</p>
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={form.image_url}
+                  alt="Preview"
+                  className="w-full h-full object-cover"
+                  onError={() => setImgBroken(true)}
+                />
+              )}
             </div>
           )}
 

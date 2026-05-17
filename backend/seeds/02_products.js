@@ -12,7 +12,7 @@ export async function seed(knex) {
       description: 'Also known as Pakistani Basmati, this is a premium variety of Basmati rice typically associated with the Jammu region in India, specifically known for its high-quality aromatic rice. Available in 30Kg & 10Kg Packing.',
       price: 299.00,
       original_price: 349.00,
-      image_url: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&auto=format&fit=crop&q=80',
+      image_url: 'https://delivery.pixelbin.io/predictions/outputs/1d/sr/upscaleRestricted/019e34a6-0f96-7ff5-96e2-e840edbc7cab/result_0.jpeg',
       category_id: catMap['rice'],
       weight: '1 kg',
       badge: 'Bestseller',

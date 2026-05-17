@@ -28,7 +28,7 @@ const SORT_OPTIONS = [
 const BADGE_OPTIONS = ['Bestseller', 'Premium', 'New', 'Heritage', "Chef's Pick"];
 
 /* ─── Product card ──────────────────────────────────────────────────────── */
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
   const { addItem, isInCart } = useCart();
   const [wished, setWished] = useState(false);
   const [added,  setAdded]  = useState(false);
@@ -53,7 +53,8 @@ function ProductCard({ product }: { product: Product }) {
         {product.image_url ? (
           <Image src={product.image_url} alt={product.name} fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,25vw" />
+            sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,25vw"
+            priority={priority} />
         ) : (
           <div className="w-full h-full bg-[#EFE7DE]" />
         )}
@@ -439,7 +440,7 @@ export default function ShopPage() {
               {activeFilterCount > 0 ? ' (filtered)' : ''}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {sorted.map((p) => <ProductCard key={p.slug} product={p} />)}
+              {sorted.map((p, i) => <ProductCard key={p.slug} product={p} priority={i === 0} />)}
             </div>
             {hasMore && (
               <div className="text-center mt-10">
